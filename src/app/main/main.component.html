@@ -1,0 +1,29 @@
+<button mat-button [matMenuTriggerFor]="animals"><mat-icon>menu</mat-icon></button>
+
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="personal">Personal</button>
+  <button mat-menu-item [matMenuTriggerFor]="professional">Professional</button>
+</mat-menu>
+
+<mat-menu #personal="matMenu">
+  <button mat-menu-item>About</button>
+  <button mat-menu-item>Volunteer work</button>
+  <button mat-menu-item [matMenuTriggerFor]="passions" >Passions</button>
+</mat-menu>
+
+<mat-menu #professional="matMenu">
+  <button mat-menu-item>Resume</button>
+  <button mat-menu-item [matMenuTriggerFor]="codeP" >Code projects</button>
+</mat-menu>
+
+<mat-menu #passions="matMenu">
+  <button mat-menu-item>Future work</button>
+  <button mat-menu-item>Bucket list</button>
+</mat-menu>
+
+<mat-menu #codeP="matMenu">
+  <button mat-menu-item>SQL</button>
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>HTML & CSS</button>
+  <button mat-menu-item>Project repos</button>
+</mat-menu>
